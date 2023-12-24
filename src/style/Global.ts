@@ -15,4 +15,7 @@ export default createGlobalStyle`
     p, button, span{
         font-family: 'Roboto Condensed', sans-serif;
     }
+    a{
+        text-decoration: none;
+    }
 `;
