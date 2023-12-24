@@ -1,6 +1,7 @@
 import React from 'react';
 import { ButtonHeader, HeaderS, RouteHeader, TextHeader } from './style';
 import { Logo } from '../logo/Logo';
+import { Link } from 'react-router-dom';
 
 export const HeaderC = () => {
 	return (
@@ -8,12 +9,22 @@ export const HeaderC = () => {
 			<div className='container-header'>
 				<Logo />
 				<TextHeader>
-					<RouteHeader>Home</RouteHeader>
-					<RouteHeader>Service</RouteHeader>
-					<RouteHeader>About</RouteHeader>
-					<RouteHeader>Plans</RouteHeader>
+					<Link to='/'>
+						<RouteHeader>Home</RouteHeader>
+					</Link>
+					<Link to='/Service'>
+						<RouteHeader>Service</RouteHeader>
+					</Link>
+					<Link to='/About'>
+						<RouteHeader>About</RouteHeader>
+					</Link>
+					<Link to='/Plans'>
+						<RouteHeader>Plans</RouteHeader>
+					</Link>
 				</TextHeader>
-				<ButtonHeader>Contact</ButtonHeader>
+				<Link to='/Contact'>
+					<ButtonHeader>Contact</ButtonHeader>
+				</Link>
 			</div>
 		</HeaderS>
 	);
